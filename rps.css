@@ -1,0 +1,222 @@
+
+*{
+font-weight: 1000;
+}
+/*SETS MAIN PARAMETERS,COLORS, AND FONT*/
+:root {
+    --primary-light: #ddd;
+    --primary-dark: #78adcf;
+    --header: #0979a5;
+    --secondary-light: #d6d0c0;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  
+  body {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+    line-height: 1.6;
+    margin-bottom: 100px;
+  }
+  
+  button {
+    border: 1px;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    outline: 1px;
+  }
+
+  /*CUSTOMISES HEADER AND TITLE*/
+  .header {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
+    background-color: var(--header);
+  }
+  
+  .title {
+    font-size: 32px;
+  }
+  
+  /*CUSTOMISES SCOREBOARD*/
+  .main {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .scoreboard {
+    margin-bottom: 32px;
+  }
+  
+  .score-info {
+    font-size: 32px;
+  }
+  
+  .score-message {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .scores-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 400px;
+    padding: 10px;
+    margin: 0 auto;
+  }
+  
+  .score-box {
+    width: 170px;
+  }
+  
+  .score {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  /*SETS PARAMETERS FOR BUTTONS' SIZE, COLORS,AND PLACEMENT*/
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+  .btn-rock{
+    background-color: #ff7474;
+    width: 160px;
+    height: 160px;
+  }
+
+  .btn-paper{
+    background-color: #2873ff;
+    width: 160px;
+    height: 160px;
+  }
+  .btn-scissors{
+    background-color: #ffee51;
+    width: 160px;
+    height: 160px;
+  }
+
+  .btn {
+    border-radius: 10px;
+  }
+   .btn-rock:hover {
+    background-color: #f59393;
+  }
+  
+  
+  .btn-paper:hover {
+    background-color: #5a94ff;
+  }
+
+  .btn-scissors:hover {
+    background-color: #fdf393;
+  }
+  
+  .btn-rock:active {
+    background-color: #ff3d3d;
+  }
+
+  .btn-paper:active {
+    background-color: #1774ff;
+  }
+  
+   .btn-scissors:active {
+    background-color: #ffed4a;
+  }
+  
+  .sign {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #d2dada;
+    border: rgb(29, 28, 28);
+  }
+  
+  .modal {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--primary-dark);
+    text-align: center;
+    font-size: 30px;
+    user-select: none;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+  }
+  
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .modal-title {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .btn-restart {
+    padding: 10px 20px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+  
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+  }
+  
+  .overlay.active {
+    display: block;
+  }
+  
+  @media (max-width: 550px) {
+    .title {
+      font-size: 18px;
+    }
+  
+    .score-info {
+      font-size: 26px;
+    }
+  
+    .buttons {
+      gap: 10px;
+    }
+  
+    .btn-square {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .sign {
+      font-size: 50px;
+    }
+  
+    .modal {
+      width: 95%;
+    }
+  }
